@@ -1,5 +1,7 @@
-{% load static %}
-<link rel="stylesheet" href="{% static 'style.css' %}">
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
 <h1>Hello from Insharah</h1>
 <h2>I'm learning Django</h2>
 <p>It is my first template</p>
+{% endblock %}
