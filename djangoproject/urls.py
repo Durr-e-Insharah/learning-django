@@ -26,6 +26,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('books/', views.book_list, name='book_list'),
     path('books/<int:book_id>/', views.book_detail, name='book_detail'),
+    path('find-store/', views.find_store, name='find_store'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
