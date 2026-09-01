@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block title %}Books{% endblock %}
+{% block content %}
+<div class="grid">
+{% for book in books %}
+  <a href="{% url 'book_detail' book.id %}" class="card">
+    {% if book.image %}<img src="{{ book.image.url }}" alt="{{ book.title }}">{% endif %}
+    <h3>{{ book.title }}</h3>
+    <p>{{ book.author }}</p>
+    <span class="pill">Rs {{ book.price }}</span>
+  </a>
+{% endfor %}
+</div>
+{% endblock %}

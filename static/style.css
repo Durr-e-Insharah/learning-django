@@ -1,7 +1,94 @@
 body {
-    background-color: black;
-    color: white;
+    background-color: #fdf6f0;
+    color: #4a4a4a;
+    font-family: 'Segoe UI', Arial, sans-serif;
     text-align: center;
-    font-family: Arial, sans-serif;
-    padding-top: 50px;
+    margin: 0;
+    padding: 20px;
+}
+
+nav {
+    background-color: #f8d7e3;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    color: #6a4c93;
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 2px solid #d8c4f0;
+    border-radius: 16px;
+    padding: 15px;
+    width: 200px;
+    text-decoration: none;
+    color: #4a4a4a;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.pill {
+    display: inline-block;
+    background-color: #c8f4de;
+    color: #2f7d5c;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: #d8c4f0;
+    color: #4a4a4a;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.detail-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+.detail-card img {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 15px;
+}
+
+.author {
+    color: #9b8bb4;
+    font-style: italic;
+}
+
+.desc {
+    margin-top: 15px;
+    line-height: 1.6;
 }
