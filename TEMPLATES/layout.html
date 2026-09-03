@@ -11,8 +11,21 @@
         <link rel="stylesheet" href="{% static 'css/dist/styles.css' %}">
          </head>
           <body>
-             <nav>This is our navbar</nav> 
+            <nav>
+              <a href="{% url 'home' %}">Home</a>
+              <a href="{% url 'book_list' %}">Books</a>
+              <a href="{% url 'find_store' %}">Find Store</a>
+              {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}">Logout ({{ user.username }})</a>
+              {% else %}
+                <a href="{% url 'login' %}">Login</a>
+                <a href="{% url 'register' %}">Register</a>
+              {% endif %}
+            </nav>
              {% block content %}
              {% endblock %}
+             <footer class="site-footer">
+              <p>&copy; {% now "Y" %} Insharah's Book Nook. All rights reserved.</p>
+            </footer>
              </body>
               </html>

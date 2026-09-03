@@ -19,6 +19,7 @@ from django.urls import path, include
 from core import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
@@ -27,6 +28,9 @@ urlpatterns = [
     path('books/', views.book_list, name='book_list'),
     path('books/<int:book_id>/', views.book_detail, name='book_detail'),
     path('find-store/', views.find_store, name='find_store'),
+    path('register/', views.register, name='register'),
+    path('login/', auth_views.LoginView.as_view(template_name='registration/login.html'),name='login'),
+        path('logout/', views.user_logout, name='logout'),  
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

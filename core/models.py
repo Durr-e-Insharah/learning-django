@@ -39,3 +39,5 @@ class Award(models.Model):
 
     def __str__(self):
         return f"{self.award_name} for {self.book.title}"
+    
+    
